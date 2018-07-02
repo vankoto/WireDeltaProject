@@ -1,4 +1,5 @@
 //I am just creating a string which will help me connect to the database.
+//It could have been better and more secure, but just for the sake of the exercise.
 
 module.exports = {
   var username = "ivanwiredelta";
