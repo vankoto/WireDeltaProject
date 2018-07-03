@@ -5,6 +5,7 @@ var app = express();
 var mongoose = require('mongoose');
 var dbconfig = require('./dbconfig');
 var userController = require('./controllers/userController');
+var companyController = require('./controllers/companyController');
 
 var port = process.env.PORT || 3000;
 
@@ -14,5 +15,6 @@ app.set('view engine', 'handlebars');
 mongoose.connect(dbconfig.getDbConnectionString());
 
 userController(app);
+companyController(app);
 
 app.listen(port);
