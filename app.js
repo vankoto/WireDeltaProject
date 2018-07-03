@@ -6,6 +6,7 @@ var mongoose = require('mongoose');
 var dbconfig = require('./dbconfig');
 var userController = require('./controllers/userController');
 var companyController = require('./controllers/companyController');
+var apiUserEndPoints = require('./controllers/apiUserEndPoints');
 
 var port = process.env.PORT || 3000;
 
@@ -16,5 +17,6 @@ mongoose.connect(dbconfig.getDbConnectionString());
 
 userController(app);
 companyController(app);
+apiUserEndPoints(app);
 
 app.listen(port);
