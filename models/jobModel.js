@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var jobSchema = new Schema({
-    _id: Schema.types.ObjectId,
+    _id: Schema.Types.ObjectId,
     isEmergency: Boolean,
     title: String,
     description: String,

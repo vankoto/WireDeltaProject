@@ -5,7 +5,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var companySchema = new Schema({
-    _id: Schema.types.ObjectId,
+    _id: Schema.Types.ObjectId,
     name: String,
     lat: Number,
     lng: Number,

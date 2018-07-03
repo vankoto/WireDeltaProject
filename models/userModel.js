@@ -5,7 +5,6 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var userSchema = new Schema({
-    _id: Schema.types.ObjectId,
     active: Boolean,
     profilePic: String,
     name: String,
@@ -15,7 +14,14 @@ var userSchema = new Schema({
     address: String,
     zipCode: String,
     city: String,
-    timestamps: true
+    createdAt: {
+      type: Date,
+      default: Date.now
+    },
+    updatedAt: {
+      type: Date,
+      default: Date.now
+    }
 });
 
 var Users = mongoose.model('Users', userSchema);
