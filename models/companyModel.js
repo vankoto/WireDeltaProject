@@ -5,7 +5,6 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var companySchema = new Schema({
-    _id: Schema.Types.ObjectId,
     name: String,
     lat: Number,
     lng: Number,
@@ -21,7 +20,14 @@ var companySchema = new Schema({
     isPaid: Boolean,
     isEnabled: Boolean,
     isVisible: Boolean,
-    timestamps: true
+    createdAt: {
+      type: Date,
+      default: Date.now
+    },
+    updatedAt: {
+      type: Date,
+      default: Date.now
+    }
 });
 
 var Companies = mongoose.model('Companies', companySchema);
